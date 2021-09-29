@@ -21,7 +21,7 @@ function checkLength(countries) {
   } else if (countries.length >= 2 && countries.length <= 10) {
     const markup = countries
       .map(country => {
-        return `<li><img class="flag__img" src="${country.flags[0]}" alt="Flag of ${country.name}" width="50" height="30"></img><span> ${country.name}</span>
+        return `<li><img class="flag__img" src="${country.flags.svg}" alt="Flag of ${country.name}" width="50" height="30"></img><span> ${country.name}</span>
             </li>`;
       })
       .join('');
@@ -30,7 +30,7 @@ function checkLength(countries) {
     const markup = countries
       .map(country => {
         return `<li>
-          <img class="flag__img" src="${country.flags[0]}" alt="Flag of ${
+          <img class="flag__img" src="${country.flags.svg}" alt="Flag of ${
           country.name
         }" width="50" height="30"></img><span class="country__name"> <b>${country.name}</b></span>
           <p><b>Capital</b>: ${country.capital}</p>
